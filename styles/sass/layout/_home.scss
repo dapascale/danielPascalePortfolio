@@ -1,11 +1,11 @@
-// Home/Landing Page
+// Styling for Home/Landing Page
 
 .home {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../assets/nineties1.gif);
+    background-image: url(../assets/homeBgForNow.gif);
     background-position: center;
     background-size: cover;
     .title {
@@ -16,5 +16,10 @@
         align-items: center;
         height: min-content;
         @include position(relative, -50px, 0)
+    }
+    .subtitle {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: $white;
     }
 }

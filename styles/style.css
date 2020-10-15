@@ -448,7 +448,7 @@ li a:hover, li a:focus, li a.clicked {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(../assets/nineties1.gif);
+  background-image: url(../assets/homeBgForNow.gif);
   background-position: center;
   background-size: cover;
 }
@@ -475,6 +475,12 @@ li a:hover, li a:focus, li a.clicked {
   position: relative;
   top: -50px;
   left: 0;
+}
+
+.home .subtitle {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .aboutContent {
@@ -552,6 +558,9 @@ li a:hover, li a:focus, li a.clicked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 
@@ -576,10 +585,70 @@ li a:hover, li a:focus, li a.clicked {
 
 .fact .factImg {
   width: 80%;
+  margin: 30px 0;
 }
 
 .fact .factImg img {
   width: 100%;
+}
+
+.fact h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 3px solid #f36794;
+  width: 80%;
+  height: 80px;
+  color: #000;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+  padding: 10px;
+  opacity: .7;
+}
+
+.fact .factText {
+  background-color: transparent;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: 8px double #9ae109;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: .7;
+  z-index: 10;
+}
+
+.fact .factText p {
+  text-align: center;
+  padding: 10px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #000;
+  z-index: 99;
+  opacity: 1;
+}
+
+.small {
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .skillsContent {
@@ -661,15 +730,31 @@ li a:hover, li a:focus, li a.clicked {
   width: 100%;
 }
 
-.project {
+.project,
+.projectRev {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
+}
+
+.project h3,
+.projectRev h3 {
+  margin: 10px;
+  font-family: "Staatliches";
+  font-size: 4rem;
+}
+
+.project p,
+.projectRev p {
+  margin: 10px;
+}
+
+.project {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 100%;
 }
 
 .project .projectImg {
@@ -687,7 +772,280 @@ li a:hover, li a:focus, li a.clicked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectRev {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.projectRev .projectImg {
+  width: calc(100% / 2 - 40px);
+  margin-left: 40px;
+}
+
+.projectRev .projectImg img {
+  width: 100%;
+}
+
+.projectRev .projectText {
+  width: calc(100% / 2 - 40px);
+  margin-right: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.used {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.used img {
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+}
+
+.viewProj {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.viewProj a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1rem;
+  text-align: center;
+  letter-spacing: 0px;
+  font-weight: 600;
+  color: #5c5c5c;
+}
+
+.viewProj i {
+  color: #5c5c5c;
+  font-size: 4rem;
+  padding: 10px;
+  margin: 0px 20px;
+}
+
+.contact {
+  padding-bottom: 80px;
+}
+
+.bannerBoy {
+  width: 100%;
+  margin-top: 60px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bannerBoy img {
+  width: 100%;
+}
+
+.contactBoxes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactBoxes .conBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  height: 150px;
+  width: calc(100% / 4 - 40px);
+  border: 2px solid #f3f3f3;
+  border-radius: 3px;
+}
+
+.contactBoxes .conBox i {
+  color: #9ae109;
+  font-size: 5.5rem;
+  margin-bottom: 15px;
+}
+
+.contactBoxes .conBox p {
+  font-weight: 600;
+  font-size: 1.8rem;
+  letter-spacing: 0px;
+}
+
+.contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+form .bigInfoBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70%;
+  margin: 40px;
+}
+
+form .bigInfoBox .commentBox {
+  border: 2px solid #f3f3f3;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 2rem;
+  color: #5c5c5c;
+  width: 55%;
+}
+
+.infoOne {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+  width: 40%;
+}
+
+.infoOne input {
+  width: 100%;
+  height: 40px;
+  font-size: 2rem;
+  color: #5c5c5c;
+  border: 2px solid #f3f3f3;
+  border-radius: 3px;
+}
+
+.infoOne input:nth-of-type(2) {
+  margin: 30px 0;
+}
+
+label {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+button {
+  width: 40%;
+  height: 100px;
+  padding-bottom: 20px;
+  font-size: 2.5rem;
+  font-family: "Staatliches";
+  font-style: italic;
+  color: #ffffff;
+  border: none;
+  background-color: transparent;
+  background-image: url(../assets/brushStrokeFooter.png);
+  background-size: cover;
+  overflow: visible;
 }

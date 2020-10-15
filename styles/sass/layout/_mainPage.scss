@@ -1,4 +1,5 @@
-// Main Layout
+// Styling for Main Layout
+
 .mainPage {
     @include position(absolute, 0, 175px);
     section { 
@@ -8,28 +9,4 @@
 
 .wrapper {
     @include wrapper(1200px);
-}
-
-.pageTitle {
-    width: 100%;
-    h2 {
-        font-size: 3rem;
-        font-weight: 600;
-        border-bottom: 2px solid $pink;
-        padding: 10px 0px;
-        text-transform: capitalize;
-    }
-    p {
-        color: #b3b3b3;
-        font-weight: 400;
-        font-size: 1.5rem;
-        font-style: italic;
-        text-align: right;
-        padding: 10px 0;
-    }
-    // .gifOverlay {
-    //     background-image: url(../assets/nineties1.gif);
-    //     background-size: contain;
-    //     z-index: 10;
-    // }
 }

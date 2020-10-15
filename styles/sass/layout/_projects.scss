@@ -1,4 +1,4 @@
-// Project Section styling
+// Styling for Project Section
 
 .projectCont {
     display: flex;
@@ -9,10 +9,22 @@
     width: 100%;
 }
 
-.project {
+.project,
+.projectRev {
     display: flex;
-    flex-direction: row;
     width: 100%;
+    h3 {
+        margin: 10px;
+        font-family: $fontStrong;
+        font-size: 4rem;
+    }
+    p {
+        margin: 10px;
+    }
+}
+
+.project {
+    flex-direction: row;
     .projectImg {
         width: calc(100% / 2 - 40px);
         margin-right: 40px;
@@ -24,6 +36,62 @@
         width: calc(100% / 2 - 40px);
         margin-left: 40px;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+}
+
+.projectRev {
+    flex-direction: row-reverse;    
+    .projectImg {
+        width: calc(100% / 2 - 40px);
+        margin-left: 40px;        
+        img {
+            width: 100%;
+        }
+    }
+    .projectText {
+        width: calc(100% / 2 - 40px);
+        margin-right: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.used {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    img {
+        width: 40px;
+        height:40px;
+        margin: 10px;
+    }
+}
+
+.viewProj {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        text-align: center;
+        letter-spacing: 0px;
+        font-weight: 600;
+        color: $darkgrey;
+    }
+    i {
+        color: $darkgrey;
+        font-size: 4rem;
+        padding: 10px;
+        margin: 0px 20px;
     }
 }
