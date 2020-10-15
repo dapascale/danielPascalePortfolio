@@ -1,0 +1,36 @@
+// Styles for Skills Section
+
+.skillsContent {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    padding-top: 40px;
+    @include center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% / 5 - 60px);
+    margin: 30px 30px;
+    padding: 10px;
+    img {
+        width: 100%;
+        transform: scale(1);
+        transition: transform 0.2s ease-in;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    p {
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-top: 5px;
+        width: min-content;
+    }
+}

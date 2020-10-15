@@ -1,0 +1,49 @@
+html {
+    font-size: 62.5%;
+    line-height: 1.15;
+}
+
+h1 {
+    font-family: $fontStrong, sans-serif;
+    font-size: 7rem;
+    font-weight: 400;
+    color: $white;
+    margin: 0;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-family: $fontCasual;
+    font-weight: 400;
+    font-size: 2rem;
+    color: $darkgrey;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+p,
+a,
+i,
+ul,
+li {
+    font-family: $fontCasual;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: $darkgrey;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+ul,
+li,
+a {
+    list-style-type: none;
+    color: inherit;
+    text-decoration: none;
+}
+
+
+

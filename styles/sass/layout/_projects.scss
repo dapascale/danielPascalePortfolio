@@ -1,0 +1,29 @@
+// Project Section styling
+
+.projectCont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    .projectImg {
+        width: calc(100% / 2 - 40px);
+        margin-right: 40px;
+        img {
+            width: 100%;
+        }
+    }
+    .projectText {
+        width: calc(100% / 2 - 40px);
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+    }
+}
