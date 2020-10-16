@@ -584,13 +584,14 @@ label #two {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  margin-bottom: 60px;
 }
 
 .intro .aboutIntro {
@@ -599,14 +600,18 @@ label #two {
 }
 
 .intro .aboutPicture {
-  width: calc(100% / 2 - 30px);
+  width: 325px;
+  height: 325px;
   margin-left: 30px;
   padding: 20px 0 10px;
 }
 
 .intro .aboutPicture img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  border-radius: 10px;
+  border-right: 3px solid #9ae109;
+  border-bottom: 3px solid #9ae109;
 }
 
 .intro .hello {
@@ -1139,7 +1144,7 @@ form .bigInfoBox .commentBox {
 }
 
 button {
-  width: 40%;
+  width: 70%;
   height: 100px;
   padding-bottom: 20px;
   font-size: 2.5rem;
@@ -1149,8 +1154,20 @@ button {
   border: none;
   background-color: transparent;
   background-image: url(../assets/brushStrokeFooter.png);
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
   overflow: visible;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+button:hover, button:focus {
+  color: #9ae109;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 @media (max-width: 940px) {

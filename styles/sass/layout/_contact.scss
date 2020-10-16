@@ -97,7 +97,7 @@ form {
 }
 
 button {
-    width: 40%;
+    width: 70%;
     height: 100px;
     padding-bottom: 20px;
     font-size: 2.5rem;
@@ -107,6 +107,15 @@ button {
     border: none;
     background-color: transparent;
     background-image: url(../assets/brushStrokeFooter.png);
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     overflow: visible;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 0.4s ease-in-out;
+    &:hover,
+    &:focus {
+        color: $green;
+        transform: scale(1.1);
+    }
 }
