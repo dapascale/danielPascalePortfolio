@@ -1,2 +1,200 @@
 // Styling for Responsive Design
 
+// Laptop
+@media (max-width: 940px) {
+
+    // About Section
+    .fact {
+        h5{
+            height: 140px;
+        }
+        .factText p {
+            font-size: 2.2rem;
+        }
+    }
+
+    // Project Section
+    .project,
+    .projectRev {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .projectImg {
+            margin-right: 0;
+            margin-left: 0;
+            width: 75%;
+        }
+        .projectText {
+            margin-left: 0;
+            margin-right: 0;
+            width: 80%;
+        }
+    }
+
+    // Contact Section
+    .contactBoxes .conBox {
+        width: calc(100% / 2 - 40px);
+    }
+}
+
+// Tablet
+@media (max-width: 768px) {
+
+    // Nav Bar & Header
+    .header {
+        display: none;
+    }
+    .resNavBar {
+        display: inline-block;
+        position: fixed;
+        nav li {
+            width: 80px;
+        }
+        nav li a {
+            width: 80px;
+        }
+    }
+    .mainPage {
+        left: 0;
+    }
+
+    // About Section
+    .intro {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        .aboutIntro {
+            width: 80%;
+            margin-top: 40px;
+            margin-right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .aboutContent {
+        padding-bottom: 0;
+    }
+
+    // Skills Section
+    .skillsContent {
+        width: 100%;
+    }
+    .used {
+        margin-top: 20px;
+    }
+
+    // Contact Section
+    form .bigInfoBox {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 40px 10px;
+        .commentBox {
+            width: 75%;
+            margin-top: 40px;
+            height: 200px;
+        }
+    }
+    .infoOne {
+        width: 75%;
+        justify-content: center;
+    }
+}
+
+// Mobile
+@media (max-width: 420px) {
+    // Header & NavBar
+    .resNavBar {
+        display: none;
+    }
+    .header {
+        display: initial;
+        width: 100vw;
+        left: -100%;
+        transition: left 0.7s ease-in-out;
+    }
+    .selfImgCont {
+        @include center;
+    }
+    .mainNav ul {
+        width: 100vw;
+    }
+    label {    
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        z-index: 199;
+        height: 55px;
+        width: 55px;
+        display: block;
+        background-color: $pink;
+        border-radius: 50%;
+        text-align: center;
+        #one {
+            display: block;
+            z-index: 200;
+            color: $white;
+            font-size: 3.8rem;
+            padding: 3px 6px;
+            margin-right: 4px;
+        }
+    }
+    #resNav:checked ~ .header {
+        left: 0;
+    }
+    .home .title {
+        align-items: flex-start;;
+    }
+
+    // About Section
+    .intro .aboutPicture {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .funFacts {
+        display: none;
+    }
+
+    // Skills Section
+    .skill {
+        margin: 10px;
+        width: 6rem;
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    // Projects Section
+    .project h3,
+    .projectRev h3 {
+        text-align: center;
+        width: 80%;
+    }
+    .used {
+        margin-bottom: 40px;
+        img {
+            margin: 5px;
+        }
+    }
+
+    // Contact Section
+    .bannerBoy {
+        display: none;
+    }
+    .contactBoxes .conBox {
+        width: 100%;
+    }
+    form .bigInfoBox {
+        width: 100%;
+        margin: 40px auto;
+        .infoOne input,
+        .commentBox {
+            font-size: 1.5rem;
+        }
+    }
+    button {
+        width: 80%;
+    }
+}

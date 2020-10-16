@@ -330,17 +330,16 @@ a {
   width: 100%;
 }
 
-nav ul {
+.mainNav ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
   width: 160px;
   text-align: center;
-  background-color: #9ae109;
   margin-bottom: 60px;
 }
 
-li {
+.mainNav ul li {
   height: 50px;
   text-transform: capitalize;
   background-color: #ffffff;
@@ -349,11 +348,11 @@ li {
   transition: all 0.2s ease-in;
 }
 
-li:hover, li:focus {
+.mainNav ul li a:hover, .mainNav ul li:focus {
   background-color: #f3f3f3;
 }
 
-li a {
+.mainNav ul li a {
   display: block;
   font-size: 1.5rem;
   font-weight: 500;
@@ -366,7 +365,9 @@ li a {
   transition: all 0.2s ease-in;
 }
 
-li a:hover, li a:focus, li a.clicked {
+.mainNav ul li a:hover,
+.mainNav ul li a:focus,
+.mainNav ul li a:active {
   border-right: 2px solid #9ae109;
   color: #3f3f3f;
 }
@@ -397,6 +398,80 @@ li a:hover, li a:focus, li a.clicked {
 
 .socialIcon i {
   font-size: 2rem;
+  color: #f36794;
+}
+
+.resNavBar {
+  display: none;
+  height: 50px;
+  width: 100vw;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 100;
+}
+
+.resNavBar nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+.resNavBar nav li {
+  display: inline-block;
+  line-height: 50px;
+  text-align: center;
+  width: 100px;
+}
+
+.resNavBar nav li a {
+  position: relative;
+  display: inline-block;
+  width: 100px;
+  padding: 5px 0;
+  color: #5c5c5c;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 1.5rem;
+  border-bottom: 2px transparent solid;
+  -webkit-transition: border-bottom 0.2s ease-in;
+  transition: border-bottom 0.2s ease-in;
+}
+
+.resNavBar nav li a:hover,
+.resNavBar nav li a:focus,
+.resNavBar nav li a:active {
+  border-bottom: 2px #f3f3f3 solid;
+}
+
+.resNavBar h2 {
+  font-family: "Staatliches";
+  color: #ffffff;
+}
+
+label #one,
+label #two {
+  font-size: 3rem;
+  color: #f36794;
+  float: right;
+  line-height: 50px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+#resNav {
+  display: none;
+}
+
+.topResNav {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  width: 200px;
+  height: 50px;
+}
+
+.topResNav h2 {
+  font-size: 2.7rem;
   color: #f36794;
 }
 
@@ -526,11 +601,12 @@ li a:hover, li a:focus, li a.clicked {
 .intro .aboutPicture {
   width: calc(100% / 2 - 30px);
   margin-left: 30px;
+  padding: 20px 0 10px;
 }
 
 .intro .aboutPicture img {
   width: 100%;
-  height: 75%;
+  height: auto;
 }
 
 .intro .hello {
@@ -607,7 +683,7 @@ li a:hover, li a:focus, li a.clicked {
           justify-content: center;
   border-bottom: 3px solid #f36794;
   width: 80%;
-  height: 80px;
+  height: 100px;
   color: #000;
   text-align: center;
   text-transform: uppercase;
@@ -649,6 +725,7 @@ li a:hover, li a:focus, li a.clicked {
 .small {
   font-size: 1rem;
   font-style: italic;
+  display: inline-block;
 }
 
 .skillsContent {
@@ -680,7 +757,7 @@ li a:hover, li a:focus, li a.clicked {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: calc(100% / 5 - 60px);
+  width: 10rem;
   margin: 30px 30px;
   padding: 10px;
 }
@@ -905,6 +982,7 @@ li a:hover, li a:focus, li a.clicked {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 40px;
 }
 
 .contactBoxes .conBox {
@@ -930,13 +1008,13 @@ li a:hover, li a:focus, li a.clicked {
 
 .contactBoxes .conBox i {
   color: #9ae109;
-  font-size: 5.5rem;
+  font-size: 5rem;
   margin-bottom: 15px;
 }
 
 .contactBoxes .conBox p {
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   letter-spacing: 0px;
 }
 
@@ -969,6 +1047,19 @@ form {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+form label {
+  font-size: 0;
+  width: 1px;
+  height: 1px;
+  display: inline-block;
+  overflow: hidden;
+  position: absolute;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  clip: rect(1px, 1px, 1px, 1px);
 }
 
 form .bigInfoBox {
@@ -1005,11 +1096,12 @@ form .bigInfoBox .commentBox {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 10px;
+  margin: 0 10px;
   width: 40%;
 }
 
 .infoOne input {
+  padding: 5px;
   width: 100%;
   height: 40px;
   font-size: 2rem;
@@ -1020,19 +1112,6 @@ form .bigInfoBox .commentBox {
 
 .infoOne input:nth-of-type(2) {
   margin: 30px 0;
-}
-
-label {
-  font-size: 0;
-  width: 1px;
-  height: 1px;
-  display: inline-block;
-  overflow: hidden;
-  position: absolute;
-  border: 0;
-  padding: 0;
-  margin: 0;
-  clip: rect(1px, 1px, 1px, 1px);
 }
 
 button {
@@ -1048,4 +1127,212 @@ button {
   background-image: url(../assets/brushStrokeFooter.png);
   background-size: cover;
   overflow: visible;
+}
+
+@media (max-width: 940px) {
+  .fact h5 {
+    height: 140px;
+  }
+  .fact .factText p {
+    font-size: 2.2rem;
+  }
+  .project,
+  .projectRev {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project .projectImg,
+  .projectRev .projectImg {
+    margin-right: 0;
+    margin-left: 0;
+    width: 75%;
+  }
+  .project .projectText,
+  .projectRev .projectText {
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
+  }
+  .contactBoxes .conBox {
+    width: calc(100% / 2 - 40px);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+  .resNavBar {
+    display: inline-block;
+    position: fixed;
+  }
+  .resNavBar nav li {
+    width: 80px;
+  }
+  .resNavBar nav li a {
+    width: 80px;
+  }
+  .mainPage {
+    left: 0;
+  }
+  .intro {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .intro .aboutIntro {
+    width: 80%;
+    margin-top: 40px;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .aboutContent {
+    padding-bottom: 0;
+  }
+  .skillsContent {
+    width: 100%;
+  }
+  .used {
+    margin-top: 20px;
+  }
+  form .bigInfoBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 40px 10px;
+  }
+  form .bigInfoBox .commentBox {
+    width: 75%;
+    margin-top: 40px;
+    height: 200px;
+  }
+  .infoOne {
+    width: 75%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .resNavBar {
+    display: none;
+  }
+  .header {
+    display: initial;
+    width: 100vw;
+    left: -100%;
+    -webkit-transition: left 0.7s ease-in-out;
+    transition: left 0.7s ease-in-out;
+  }
+  .selfImgCont {
+    margin: 0 auto;
+  }
+  .mainNav ul {
+    width: 100vw;
+  }
+  label {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 199;
+    height: 55px;
+    width: 55px;
+    display: block;
+    background-color: #f36794;
+    border-radius: 50%;
+    text-align: center;
+  }
+  label #one {
+    display: block;
+    z-index: 200;
+    color: #ffffff;
+    font-size: 3.8rem;
+    padding: 3px 6px;
+    margin-right: 4px;
+  }
+  #resNav:checked ~ .header {
+    left: 0;
+  }
+  .home .title {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .intro .aboutPicture {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .funFacts {
+    display: none;
+  }
+  .skill {
+    margin: 10px;
+    width: 6rem;
+  }
+  .skill p {
+    font-size: 1rem;
+  }
+  .project h3,
+  .projectRev h3 {
+    text-align: center;
+    width: 80%;
+  }
+  .used {
+    margin-bottom: 40px;
+  }
+  .used img {
+    margin: 5px;
+  }
+  .bannerBoy {
+    display: none;
+  }
+  .contactBoxes .conBox {
+    width: 100%;
+  }
+  form .bigInfoBox {
+    width: 100%;
+    margin: 40px auto;
+  }
+  form .bigInfoBox .infoOne input,
+  form .bigInfoBox .commentBox {
+    font-size: 1.5rem;
+  }
+  button {
+    width: 80%;
+  }
 }

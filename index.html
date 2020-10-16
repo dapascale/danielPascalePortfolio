@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&family=Jomolhari&family=Permanent+Marker&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600&family=Staatliches&display=swap
         family=Poppins:wght@200;300;400;500;600&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles/style.css">
     <title>Daniel Pascale + Web Developer</title>
 </head>
@@ -18,15 +20,37 @@
 <body>
     <!-- TODO Website loading animation -->
 
+    <!-- Responsive Navigation Menu -->
+    <div class="resNavBar">
+        <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#aboutMe">about me</a></li>
+                <li><a href="#skills">skills</a></li>
+                <li><a href="#projects">projects</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
+        </nav>
+        <div class="topResNav">
+            <h2>Daniel Pascale</h2>
+        </div>
+    </div>
+
+    <input type="checkbox" id="resNav">
+    <label for="resNav">
+        <i class="fas fa-bars" id="one"></i>
+    </label>
     <!-- Header -->
     <header class="header">
+
         <!-- Animated image of self -->
         <div class="selfImgCont">
             <img src="./assets/homePicforNow.gif" alt="frontend developer and general cool-guy Daniel Pascale">
         </div>
         <p class="titularHero"><a href="#home">Daniel Pascale</a></p>
+
         <!-- Navigation Sidebar -->
-        <nav>
+        <nav class="mainNav">
             <ul>
                 <li><a href="#home">home</a></li>
                 <li><a href="#aboutMe">about me</a></li>
@@ -87,7 +111,7 @@
 
                         <!-- Playful Widgets -->
                         <div class="funFacts">
-                            <div class="fact">
+                            <div class="fact" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="400">
                                 <h5>time per day spent indoors <span class="small">(during pandemic)</span></h5>
                                 <div class="factImg">
                                     <img src="./assets/clockTown.png" alt="a clock">
@@ -96,7 +120,7 @@
                                     <p>21<span class="small">hrs</span> 4<span class="small">mins</span></p>
                                 </div>
                             </div>
-                            <div class="fact">
+                            <div class="fact" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="800">
                                 <h5>favorite food</h5>
                                 <div class="factImg">
                                     <img src="./assets/banhMi.png" alt="A delicious Banh Mi">
@@ -105,7 +129,7 @@
                                     <p>banh mi</p>
                                 </div>
                             </div>
-                            <div class="fact">
+                            <div class="fact" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1200">
                                 <h5>coffees consumed per day</h5>
                                 <div class="factImg">
                                     <img src="./assets/espressy.png" alt="An overturned mug with coffee that has spilled">
@@ -114,7 +138,7 @@
                                     <p>4.75</p>
                                 </div>
                             </div>
-                            <div class="fact">
+                            <div class="fact" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1600">
                                 <h5>time per day spent indoors <span class="small">(pre-pandemic)</span></h5>
                                 <div class="factImg">
                                     <img src="./assets/clockTown.png" alt="a clock">
@@ -135,64 +159,64 @@
                     <!-- Skills Header -->
                     <div class="pageTitle">
                         <h2>skills</h2>
-                        <p>Writing + Delighting!</p>
+                        <p>writing + delighting!</p>
                     </div>
             
                     <!-- Skills Content -->
                     <div class="skillsContent">
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/reshtml5.png" alt="logo for HTML 5">
                             <p>HTML5</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resCSS.png" alt="logo for CSS3">
                             <p>CSS3</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resSass.png" alt="logo for Sass">
                             <p>Sass</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resReact (1).png" alt="logo for React">
                             <p>React</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resFirebase.png" alt="logo for Firebase">
                             <p>Firebase</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resJQuery.png" alt="logo for jQuery">
                             <p>jQuery</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resJS.png" alt="logo for JavaScript">
                             <p>JavaScript</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resPhotoshop.png" alt="logo for Adobe Photoshop">
                             <p>Photoshop</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resPremiere.png" alt="logo for Adobe Premiere Pro">
                             <p>Premiere Pro</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resPairProgramming.png" alt="logo for Paired Programming">
                             <p>Team-based Development</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resGitGithub.png" alt="logo for GitHub">
                             <p>Git & GitHub</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resResponsive.png" alt="logo for responsive design">
                             <p>Responsive Design</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resAccessibility.png" alt="logo for accessibility best practices">
                             <p>Accessibility</p>
                         </div>
-                        <div class="skill">
+                        <div class="skill" data-aos="zoom-out-up" data-aos-duration="1000">
                             <img src="./assets/resAPI.png" alt="logo for restful APIs">
                             <p>Restful APIs</p>
                         </div>
@@ -207,7 +231,7 @@
                     <!-- Projects Header -->
                     <div class="pageTitle">
                         <h2>Projects</h2>
-                        <p>Dances with Details!</p>
+                        <p>dances with details!</p>
                     </div>
             
                     <!-- Projects Content -->
@@ -273,13 +297,13 @@
             
                         <div class="projectRev">
                             <div class="projectImg">
-                                <img src="./assets/nasaMockup.gif" alt="mockup of Nasa App">
+                                <img src="./assets/madLibMockup.gif" alt="mockup of Mad Libs App">
                             </div>
                             <div class="projectText">
-                                <h3>Journey to the Stars</h3>
+                                <h3>Let's Get Mad!</h3>
                                 <div class="viewProj">
-                                    <a href="https://kvaleriagonzalez.github.io/daniel-pascale-karen-gonzalez-project-four/" target="_blank" class="linkToProject"><i class="fas fa-power-off"></i>view live</a>
-                                    <a href="https://github.com/kvaleriagonzalez/daniel-pascale-karen-gonzalez-project-four" target="_blank" class="linkToProject"><i class="fab fa-github"></i>view on github</a>
+                                    <a href="https://dapascale.github.io/madMaxLibs/" target="_blank" class="linkToProject"><i class="fas fa-power-off"></i>view live</a>
+                                    <a href="https://github.com/dapascale/madMaxLibs" target="_blank" class="linkToProject"><i class="fab fa-github"></i>view on github</a>
                                 </div>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus eius odio neque nemo vitae, id qui iure voluptas mollitia, consequatur minus quos. Voluptates eius repellendus tempora alias earum, omnis aliquid. Eaque repellendus officia itaque sapiente accusamus, inventore, soluta tenetur, architecto totam culpa at aliquam quibusdam a suscipit nam iusto?</p>
                                 <div class="used">
@@ -300,7 +324,7 @@
                     <!-- Contact Header -->
                     <div class="pageTitle">
                         <h2>contact</h2>
-                        <p>Let's chit-chat!</p>
+                        <p>let's chit-chat!</p>
                     </div>
 
                     <!-- Contact Content -->
@@ -330,14 +354,14 @@
                             <div class="bigInfoBox">
                                 <div class="infoOne">
                                     <input type="name" id="name" aria-required="true" required placeholder="name">
-                                    <label for="name"></label>
+                                    <label for="name">Name:</label>
                                     <input type="email" id="email" aria-required="true" required placeholder="email">
-                                    <label for="email"></label>
+                                    <label for="email">Email:</label>
                                     <input type="text" id="subject" aria-required="true" required placeholder="subject">
-                                    <label for="subject"></label>
+                                    <label for="subject">Subject:</label>
                                 </div>
                                 <input class="commentBox" type="text" id="commentBox" aria-required="true" required placeholder="Tell me what you're thinking!">
-                                <label for="commentBox"></label>
+                                <label for="commentBox">Text here:</label>
                             </div>
                             <button>Let's gab!</button>
                         </form>
@@ -349,8 +373,9 @@
 
 
 
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://kit.fontawesome.com/8b01757f0e.js" crossorigin="anonymous"></script>
-    <script src="js/modernizr.custom.js"></script>
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>
