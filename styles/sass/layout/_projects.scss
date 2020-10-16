@@ -87,11 +87,25 @@
         letter-spacing: 0px;
         font-weight: 600;
         color: $darkgrey;
+        background-image: none;
+        transition: color 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $green;
+            background-image: url(../assets/paintSplatPink.gif);
+            background-size: 80%;
+            background-position: top;
+        }
     }
     i {
         color: $darkgrey;
         font-size: 4rem;
         padding: 10px;
         margin: 0px 20px;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            color: $green;
+        }
     }
 }
