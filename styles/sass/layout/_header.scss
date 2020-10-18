@@ -72,6 +72,20 @@
     }
 }
 
+.copyright {
+    background-color: $grey;
+    width: 160px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    padding: 3px;
+    p {
+        font-size: 1rem;
+        color: #8d8d8d;
+        text-align: center;
+    }
+}
+
 // Social Media Links
 
 .socials {
@@ -91,7 +105,7 @@
     }   
 }
 
-// Mobile Navigation Bar
+// Responsive Navigation Bar
 .resNavBar {
     display: none;
     height: 50px;

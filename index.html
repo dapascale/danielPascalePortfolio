@@ -66,6 +66,9 @@
             <a href="https://www.linkedin.com/in/danielpascalewd/" target="_blank" class="socialIcon"><i class="fab fa-linkedin"></i></a>
             <a href="https://github.com/dapascale" target="_blank" class="socialIcon"><i class="fab fa-github"></i></a>
         </div>
+        <div class="copyright">
+            <p>&copy; 2020 daniel pascale</p>
+        </div>
     </header>
 
     <!-- Main site content -->
@@ -334,8 +337,10 @@
                             <p>631-520-4320</p>
                         </div>
                         <div class="conBox" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="200">
-                            <i class="fas fa-envelope"></i>
-                            <p>dapascale@gmail.com</p>
+                            <a href="mailto:dapascale@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <p>dapascale<span class="whtspc"> </span>@gmail.com</p>
+                            </a>
                         </div>
                         <div class="conBox" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="400">
                             <i class="fas fa-globe-americas"></i>
@@ -357,7 +362,8 @@
                                     <input type="text" id="subject" aria-required="true" required placeholder="subject">
                                     <label for="subject">Subject:</label>
                                 </div>
-                                <input class="commentBox" type="text" id="commentBox" aria-required="true" required placeholder="Tell me what you're thinking!">
+                                <textarea class="commentBox" type="text" 
+                                id="commentBox" aria-required="true" required placeholder="Tell me what you're thinking!"></textarea>
                                 <label for="commentBox">Text here:</label>
                             </div>
                             <button>Let's gab!</button>

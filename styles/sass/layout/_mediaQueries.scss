@@ -35,6 +35,9 @@
     .contactBoxes .conBox {
         width: calc(100% / 2 - 40px);
     }
+    button {
+        width: 50%;
+    }
 }
 
 // Tablet
@@ -100,6 +103,9 @@
     .infoOne {
         width: 75%;
         justify-content: center;
+    }
+        button {
+        width: 60%;
     }
 }
 
@@ -195,6 +201,6 @@
         }
     }
     button {
-        width: 80%;
+        width: 90%;
     }
 }

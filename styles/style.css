@@ -372,6 +372,21 @@ a {
   color: #3f3f3f;
 }
 
+.copyright {
+  background-color: #f3f3f3;
+  width: 160px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  padding: 3px;
+}
+
+.copyright p {
+  font-size: 1rem;
+  color: #8d8d8d;
+  text-align: center;
+}
+
 .socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1033,18 +1048,38 @@ label #two {
   width: calc(100% / 4 - 40px);
   border: 2px solid #f3f3f3;
   border-radius: 3px;
+  background-image: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.contactBoxes .conBox:hover {
+  background-image: url(../assets/paintSplatPink.gif);
+  background-position: center;
+  background-size: cover;
+}
+
+.contactBoxes .conBox a {
+  text-align: center;
 }
 
 .contactBoxes .conBox i {
   color: #9ae109;
   font-size: 5rem;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 .contactBoxes .conBox p {
   font-weight: 600;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   letter-spacing: 0px;
+  max-width: 100%;
+  text-align: center;
+}
+
+.contactBoxes .conBox .whtspc {
+  font-size: 0.1rem;
 }
 
 .contactForm {
@@ -1101,20 +1136,18 @@ form .bigInfoBox {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 70%;
-  margin: 40px;
+  width: calc(100% - 40px);
+  margin: 20px;
 }
 
 form .bigInfoBox .commentBox {
-  border: 2px solid #f3f3f3;
+  border: 2px solid #9ae109;
   border-radius: 3px;
   padding: 5px;
   font-size: 2rem;
   color: #5c5c5c;
-  width: 55%;
+  width: 60%;
+  resize: none;
 }
 
 .infoOne {
@@ -1125,8 +1158,8 @@ form .bigInfoBox .commentBox {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 0 10px;
-  width: 40%;
+  margin-right: 20px;
+  width: calc(40% - 20px);
 }
 
 .infoOne input {
@@ -1135,7 +1168,7 @@ form .bigInfoBox .commentBox {
   height: 40px;
   font-size: 2rem;
   color: #5c5c5c;
-  border: 2px solid #f3f3f3;
+  border: 2px solid #9ae109;
   border-radius: 3px;
 }
 
@@ -1144,7 +1177,7 @@ form .bigInfoBox .commentBox {
 }
 
 button {
-  width: 70%;
+  width: 40%;
   height: 100px;
   padding-bottom: 20px;
   font-size: 2.5rem;
@@ -1204,6 +1237,9 @@ button:hover, button:focus {
   }
   .contactBoxes .conBox {
     width: calc(100% / 2 - 40px);
+  }
+  button {
+    width: 50%;
   }
 }
 
@@ -1286,6 +1322,9 @@ button:hover, button:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  button {
+    width: 60%;
   }
 }
 
@@ -1374,6 +1413,6 @@ button:hover, button:focus {
     font-size: 1.5rem;
   }
   button {
-    width: 80%;
+    width: 90%;
   }
 }
